@@ -1,0 +1,27 @@
+{ "menu": [
+    {
+      "id": 122,
+      "name": "broth",
+      "description": "freshly boiled from farm chicken",
+      "price": 14,
+      "is_available": true,
+      "images": []
+    },
+    {
+      "id": 12,
+      "name": "premium stake",
+      "description": "stake from Ghitza, the famous free range pork",
+      "price": 21,
+      "is_available": true,
+      "images": []
+    },
+    {
+      "id": 231,
+      "name": "summer salad",
+      "description": "an assortment of the most suculent and fresh vegetables",
+      "price": 13,
+      "is_available": true,
+      "images": []
+    }
+  ]
+}
