@@ -8,11 +8,6 @@
       <router-link to="/gallery"><v-btn flat>Gallery</v-btn></router-link>
       <router-link to="/events"><v-btn flat>Events</v-btn></router-link>
       <router-link to="/contact"><v-btn flat>Contact</v-btn></router-link>
-<!--       <v-toolbar-title>{{appTitle}}</v-toolbar-title>
-      <v-btn flat>Menu</v-btn>
-      <v-spacer></v-spacer>
-      <v-btn flat>SIGN IN</v-btn>
-      <v-btn color="brown lighten-3">JOIN</v-btn><!-->
   </v-toolbar>
 </template>
 

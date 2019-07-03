@@ -22,6 +22,30 @@
       "price": 13,
       "is_available": true,
       "images": []
+    },
+    {
+      "id": 125,
+      "name": "fries",
+      "description": "the best thing that the potatoes can give",
+      "price": 7,
+      "is_available": true,
+      "images": []
+    },
+    {
+      "id": 991,
+      "name": "eclaire",
+      "description": "french can do desserts, too",
+      "price": 21,
+      "is_available": true,
+      "images": []
+    },
+    {
+      "id": 828,
+      "name": "wine",
+      "description": "red red wine, i will always love youuuu...",
+      "price": 41,
+      "is_available": true,
+      "images": []
     }
   ]
 }
