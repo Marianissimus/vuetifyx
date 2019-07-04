@@ -1,108 +1,127 @@
 <template>
   <v-container>
-    <v-layout>
-      <v-dialog v-model="responseMessage">
+
+    <v-layout align-center justify-center>
+      <v-flex xs12 sm8 md4>
+        <v-dialog v-model="responseMessage">
+          <v-card>
+            <v-toolbar dark color="brown darken-3 flat">
+              <v-toolbar-title>
+                Reservation received!
+              </v-toolbar-title>
+            </v-toolbar>
+            <v-card-text>
+             Thank you, {{ name }} ! We just received your reservation for {{ howMany }} persons
+             for {{ date }} at {{ time }}.
+            </v-card-text>
+          </v-card>
+        </v-dialog>
+      </v-flex>
+    </v-layout>
+
+    <v-layout align-center justify-center>
+      <v-flex xs12 sm8 md4>
         <v-card>
-          <v-card-title class="headline">
-            Reservation received
-          </v-card-title>
-          <v-card-text>
-           Thank you! We just received your reservation on the name of {{ name }} for {{ howMany }} persons
-           for {{ date }} at {{ time }}.
-          </v-card-text>
+
+          <v-toolbar dark color="brown darken-3 flat">
+            <v-toolbar-title>
+              Reservation form
+            </v-toolbar-title>
+          </v-toolbar>
+
+          <v-form ref="form" class="pl-3 pr-3 pt-2 pb-3">
+
+            <v-text-field
+              v-model="name"
+              label="Name"
+              prepend-icon="account_circle"
+              :rules="nameRules"
+              >
+            </v-text-field>
+
+            <v-text-field
+              v-model="email"
+              :rules="emailRules"
+              prepend-icon="email"
+              label="E-mail"
+              required
+            ></v-text-field>
+
+
+              <v-text-field
+                v-model="howMany"
+                type="number"
+                max="12" min="1" step="1"
+                prepend-icon="group"
+                label="How Many Guests"
+                :rules="guestRules"
+                required
+              >
+              </v-text-field>
+
+             <v-menu
+              v-model="dateMenu"
+              :close-on-content-click="false"
+              :nudge-right="40"
+              lazy
+              transition="scale-transition"
+              offset-y
+              full-width
+              min-width="290px"
+            >
+              <template v-slot:activator="{ on }">
+                <v-text-field
+                  v-model="date"
+                  label="Date of reservation"
+                  prepend-icon="calendar_today"
+                  readonly
+                  v-on="on"
+                  :rules="dateRules"
+                ></v-text-field>
+              </template>
+              <v-date-picker v-model="date" :min="today" @input="dateMenu = false"></v-date-picker>
+            </v-menu>
+
+            <v-menu
+              v-model="timeMenu"
+              :close-on-content-click="false"
+              :nudge-right="40"
+              lazy
+              transition="scale-transition"
+              offset-y
+              full-width
+              min-width="290px"
+            >
+              <template v-slot:activator="{ on }">
+                <v-text-field
+                  v-model="time"
+                  label="Time of reservation"
+                  prepend-icon="alarm"
+                  readonly
+                  v-on="on"
+                  :rules="timeRules"
+                ></v-text-field>
+              </template>
+              <v-time-picker v-model="time" @input="timeMenu = false"></v-time-picker>
+            </v-menu>
+
+            <v-btn
+              :disabled="!valid"
+              color="success"
+              @click="validate">
+              Send
+            </v-btn>
+
+            <v-btn
+            color="error"
+            @click="reset">
+              Reset Form
+            </v-btn>
+
+          </v-form>
         </v-card>
-      </v-dialog>
+      </v-flex>
 
-      <v-form ref="form">
-
-        <v-text-field
-          v-model="name"
-          label="Name"
-          prepend-icon="account_circle"
-          :rules="nameRules"
-          >
-        </v-text-field>
-
-        <v-text-field
-          v-model="email"
-          :rules="emailRules"
-          prepend-icon="email"
-          label="E-mail"
-          required
-        ></v-text-field>
-
-
-          <v-text-field
-            v-model="howMany"
-            type="number"
-            max="12" min="1" step="1"
-            prepend-icon="group"
-            label="How Many Guests"
-            :rules="guestRules"
-            required
-          >
-          </v-text-field>
-
-         <v-menu
-          v-model="dateMenu"
-          :close-on-content-click="false"
-          :nudge-right="40"
-          lazy
-          transition="scale-transition"
-          offset-y
-          full-width
-          min-width="290px"
-        >
-          <template v-slot:activator="{ on }">
-            <v-text-field
-              v-model="date"
-              label="Date of reservation"
-              prepend-icon="calendar_today"
-              readonly
-              v-on="on"
-              :rules="dateRules"
-            ></v-text-field>
-          </template>
-          <v-date-picker v-model="date" :min="today" @input="dateMenu = false"></v-date-picker>
-        </v-menu>
-
-        <v-menu
-          v-model="timeMenu"
-          :close-on-content-click="false"
-          :nudge-right="40"
-          lazy
-          transition="scale-transition"
-          offset-y
-          full-width
-          min-width="290px"
-        >
-          <template v-slot:activator="{ on }">
-            <v-text-field
-              v-model="time"
-              label="Time of reservation"
-              prepend-icon="alarm"
-              readonly
-              v-on="on"
-              :rules="timeRules"
-            ></v-text-field>
-          </template>
-          <v-time-picker v-model="time" @input="timeMenu = false"></v-time-picker>
-        </v-menu>
-
-        <v-btn
-          :disabled="!valid"
-          color="success"
-          @click="validate">
-          Send
-        </v-btn>
-
-        <v-btn
-        color="error"
-        @click="reset">
-          Reset Form
-        </v-btn>
-
-      </v-form>
     </v-layout>
   </v-container>
 </template>
