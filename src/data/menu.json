@@ -6,7 +6,8 @@
       "price": 14,
       "is_available": true,
       "images": [],
-      "rating": 3
+      "rating": 3,
+      "type": ["lunch", "dinner"]
     },
     {
       "id": 12,
@@ -15,7 +16,8 @@
       "price": 21,
       "is_available": true,
       "images": [],
-      "rating": 4
+      "rating": 4,
+      "type": ["lunch", "dinner"]
     },
     {
       "id": 231,
@@ -24,7 +26,8 @@
       "price": 13,
       "is_available": true,
       "images": [],
-      "rating": 2
+      "rating": 2,
+      "type": ["lunch", "dinner", "breakfast"]
     },
     {
       "id": 125,
@@ -33,7 +36,8 @@
       "price": 7,
       "is_available": true,
       "images": [],
-      "rating": 1
+      "rating": 1,
+      "type": ["lunch", "dinner", "breakfast"]
     },
     {
       "id": 991,
@@ -42,7 +46,8 @@
       "price": 21,
       "is_available": true,
       "images": [],
-      "rating": 5
+      "rating": 5,
+      "type": ["dinner"]
     },
     {
       "id": 828,
@@ -51,7 +56,18 @@
       "price": 41,
       "is_available": true,
       "images": [],
-      "rating": 4
+      "rating": 4,
+      "type": ["dinner"]
+    },
+    {
+      "id": 332,
+      "name": "benedict eggs",
+      "description": "start your day in style",
+      "price": 12,
+      "is_available": true,
+      "images": [],
+      "rating": 4,
+      "type": ["breakfast"]
     }
   ]
 }
