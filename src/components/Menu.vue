@@ -1,5 +1,6 @@
 <template>
   <v-container grid-list-lg>
+    <current-heading title="Our Menu"></current-heading>
     <v-tabs class="mb-3" fixed-tabs color="transparent" dark slider-color="brown darken-2" show-arrows>
       <v-tab>
         <v-btn @click="filter('all')">all</v-btn>
@@ -39,8 +40,12 @@
 
 <script>
 import menuItems from '../data/menu.json'
+import Heading from './Heading.vue'
 
 export default {
+  components: {
+    'current-heading': Heading
+  },
   data () {
     return {
       items: [],
@@ -62,6 +67,12 @@ export default {
 }
 </script>
 
+<style>
+.theme--dark.v-icon {
+    color: #3e2723;
+}
+</style>
+
 <style scoped>
 .bottomRight {
   position: absolute;
@@ -72,8 +83,5 @@ export default {
   position: absolute;
   bottom: 15px;
   left: 10px;
-}
-.shadow {
-  text-shadow: 0px 0px 4px #000000;
 }
 </style>

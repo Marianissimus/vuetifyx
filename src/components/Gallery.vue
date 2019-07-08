@@ -1,5 +1,6 @@
 <template>
-  <v-container>
+  <v-container grid-list-lg>
+    <current-heading title="Gallery"></current-heading>
     <!-- the gallery -->
     <v-layout align-center justify-center>
       <v-flex sm10 md8>
@@ -78,7 +79,12 @@
 </template>
 
 <script>
+import Heading from './Heading.vue'
+
 export default {
+  components: {
+    'current-heading': Heading
+  },
   data () {
     return {
       currentImg: null,

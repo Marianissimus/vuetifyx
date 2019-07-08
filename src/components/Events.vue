@@ -1,5 +1,7 @@
 <template>
-<v-layout class="m-3">
+  <v-container grid-list-lg>
+    <current-heading title="Current Events"></current-heading>
+    <v-layout class="m-3">
       <v-flex>
         <v-sheet height="500">
           <v-calendar
@@ -64,10 +66,16 @@
         </v-sheet>
       </v-flex>
     </v-layout>
+  </v-container>
 </template>
 
 <script>
+import Heading from './Heading.vue'
+
 export default {
+  components: {
+    'current-heading': Heading
+  },
   data: () => ({
     today: '2019-01-08',
     events: [

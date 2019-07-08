@@ -1,5 +1,6 @@
 <template>
-  <v-container fluid grid-list-md>
+  <v-container grid-list-lg>
+    <current-heading title="Ongoing Promotions"></current-heading>
     <v-layout row wrap>
       <v-flex d-flex xs12 sm6 md4>
         <v-card color="purple" dark>
@@ -40,14 +41,24 @@
 </template>
 
 <script>
+import Heading from './Heading.vue'
+
 export default {
+  components: {
+    'current-heading': Heading
+  },
   data: () => ({
     lorem: `Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.`,
     today: new Date().toString().slice(0, 15),
   }),
   methods: {
-
   }
 }
 </script>
+
+<style>
+.likeTabs{
+  height: 48px;
+}
+</style>
 
