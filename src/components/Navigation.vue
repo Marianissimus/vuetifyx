@@ -51,7 +51,6 @@ export default {
   name: 'AppNavigation',
   data () {
     return {
-      appTitle: 'deliciousness'
     }
   }
 }

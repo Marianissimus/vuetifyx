@@ -20,5 +20,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+#app {
+ background-image: linear-gradient( 359.3deg,  rgba(239,235,233,1) 1%, rgba(239,235,233,0) 70.9% );
+}
 </style>

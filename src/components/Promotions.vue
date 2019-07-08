@@ -56,9 +56,4 @@ export default {
 }
 </script>
 
-<style>
-.likeTabs{
-  height: 48px;
-}
-</style>
 
