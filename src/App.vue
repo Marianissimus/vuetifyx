@@ -1,7 +1,8 @@
 <template>
   <div id="app">
       <v-app>
-        <app-nav></app-nav>
+        <app-nav @drawerChanged="drawerChanged"></app-nav>
+        <app-drawer :drawer="drawer"></app-drawer>
         <v-content transition="slide-x-transition">
           <router-view></router-view>
         </v-content>
@@ -11,10 +12,22 @@
 
 <script>
 import Navigation from './components/Navigation'
+import NavigationDrawer from './components/NavigationDrawer'
 export default {
   name: 'app',
+  data () {
+    return {
+      drawer: null,
+    }
+  },
   components: {
-    'app-nav': Navigation
+    'app-nav': Navigation,
+    'app-drawer': NavigationDrawer
+  },
+  methods: {
+    drawerChanged (value) {
+      this.drawer = value
+    }
   }
 }
 </script>
