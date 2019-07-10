@@ -12,21 +12,21 @@
     </div>
   </v-layout>
 
-<!--     <v-layout>
-      <v-parallax
-      dark
-      src="https://picsum.photos/1200/600"
+
+    <v-parallax
+    light
+    src="https://picsum.photos/1200/1600"
+    >
+      <v-layout
+      column
+      justify-center
+      align-center
       >
-        <v-layout
-        align-center
-        column
-        justify-center
-        >
-          <h1 class="display-2 font-weight-thin mb-3">Vuetify.js</h1>
-          <h4 class="subheading">Build your application today!</h4>
-        </v-layout>
-      </v-parallax>
-    </v-layout> -->
+        <h1 class="display-2 font-weight-thin mb-3">Deliciousness</h1>
+        <h4 class="subheading">Enjoy the finest food we have cooked today!</h4>
+      </v-layout>
+    </v-parallax>
+
 
     <v-layout align-center justify-center class="mt-3">
        <v-carousel
@@ -49,7 +49,7 @@
 export default {
   data () {
     return {
-       carouselItems: [
+      carouselItems: [
         {
           src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
         },

@@ -1,4 +1,5 @@
 <template>
+  <div>
   <v-toolbar app color="brown darken-4" dark>
     <v-toolbar-side-icon @click="toggleDrawer"></v-toolbar-side-icon>
     <v-spacer></v-spacer>
@@ -15,10 +16,6 @@
         <v-icon class="mr-1 material-icons-outlined">local_offer</v-icon>
         Promotions
       </v-btn>
-      <v-btn flat to="/bookings">
-        <v-icon class="mr-2 material-icons-outlined">contact_mail</v-icon>
-        Bookings
-      </v-btn>
        <v-btn flat to="/gallery">
         <v-icon class="mr-1 material-icons-outlined">photo_album</v-icon>
         Gallery
@@ -31,10 +28,16 @@
         <v-icon class="mr-1 material-icons-outlined">map</v-icon>
         Contact
       </v-btn>
+      <v-btn flat @click="dialog = true" color="lime" light>
+        <v-icon class="mr-2 material-icons-outlined">call_to_action</v-icon>
+        Book Now!
+      </v-btn>
     </v-toolbar-items>
     <v-spacer></v-spacer>
-    <v-toolbar-side-icon></v-toolbar-side-icon>
+    <v-toolbar-side-icon @click="toggleDrawer"></v-toolbar-side-icon>
   </v-toolbar>
+  <make-a-booking :dialog="dialog" @hasFinished="dialog = false"></make-a-booking>
+  </div>
 </template>
 
 <script>
@@ -42,7 +45,8 @@ export default {
   name: 'AppNavigation',
   data () {
     return {
-      drawer: true
+      drawer: true,
+      dialog: false
     }
   },
   methods: {

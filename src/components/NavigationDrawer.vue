@@ -1,5 +1,5 @@
 <template>
-    <v-navigation-drawer v-if="drawer" app right dark color="brown darken-4">
+    <v-navigation-drawer :value="drawer" app right dark class="brown darken-4">
       <v-toolbar flat>
         <v-list>
           <v-list-tile>
@@ -67,11 +67,6 @@
 
 <script>
 export default {
-  props: ['drawer'],
-  data () {
-    return {
-      currentDrawer: null
-    }
-  }
+  props: ['drawer']
 }
 </script>
