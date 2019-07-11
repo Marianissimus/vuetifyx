@@ -1,14 +1,12 @@
 <template>
-    <v-navigation-drawer :value="drawer" app right dark class="brown darken-4">
-      <v-toolbar flat>
-        <v-list>
-          <v-list-tile>
-            <v-list-tile-title class="title">
-              Application
-            </v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-toolbar>
+    <v-navigation-drawer v-model="drawer" app clipped floating temporary right dark class="brown darken-4">
+
+      <v-list-tile>
+        <v-btn light flat color="brown lighten-1" @click="drawer = false">
+          <v-icon class="mr-1 material-icons-outlined">close</v-icon>
+          Close
+        </v-btn>
+      </v-list-tile>
 
       <v-divider></v-divider>
 
@@ -34,13 +32,6 @@
       </v-list-tile>
 
       <v-list-tile>
-        <v-btn flat to="/bookings">
-          <v-icon class="mr-2 material-icons-outlined">contact_mail</v-icon>
-          Bookings
-        </v-btn>
-      </v-list-tile>
-
-      <v-list-tile>
          <v-btn flat to="/gallery">
           <v-icon class="mr-1 material-icons-outlined">photo_album</v-icon>
           Gallery
@@ -61,12 +52,28 @@
         </v-btn>
       </v-list-tile>
 
+      <v-list-tile>
+        <v-btn flat @click="$emit('makeABooking')" color="lime" light>
+          <v-icon class="mr-2 material-icons-outlined">call_to_action</v-icon>
+          Book Now!
+        </v-btn>
+      </v-list-tile>
+
     </v-navigation-drawer>
 </template>
 
 
 <script>
 export default {
-  props: ['drawer']
+  data () {
+    return {
+      drawer: false
+    }
+  },
+  methods: {
+    toggleDrawer () {
+      this.drawer = !this.drawer
+    }
+  }
 }
 </script>

@@ -2,17 +2,19 @@
   <v-container grid-list-lg>
 
   <v-layout align-center justify-center>
-    <div class="title">
-      <h2>Welcome to</h2>
-      <h1>
-        MY DELICIOUS
-        <br/>
-        RESTAURANT
-      </h1>
-    </div>
+    <v-flex>
+      <div class="title">
+        <h2>Welcome to</h2>
+        <h1>
+          MY DELICIOUS
+          <br/>
+          RESTAURANT
+        </h1>
+      </div>
+    </v-flex>
   </v-layout>
 
-
+  <v-flex>
     <v-parallax
     light
     src="https://picsum.photos/1200/1600"
@@ -26,10 +28,29 @@
         <h4 class="subheading">Enjoy the finest food we have cooked today!</h4>
       </v-layout>
     </v-parallax>
+  </v-flex>
 
+  <v-layout row class="my-3">
+    <v-flex sm4>
+      <v-card dark color="brown darken-2">
+        <v-card-text>one</v-card-text>
+      </v-card>
+    </v-flex>
+    <v-flex sm4>
+      <v-card dark color="brown lighten-2">
+        <v-card-text>two</v-card-text>
+      </v-card>
+    </v-flex>
+    <v-flex sm4>
+      <v-card dark color="brown darken-2">
+        <v-card-text>three</v-card-text>
+      </v-card>
+    </v-flex>
+  </v-layout>
 
-    <v-layout align-center justify-center class="mt-3">
-       <v-carousel
+  <v-layout row align-center justify-center>
+    <v-flex>
+      <v-carousel
        interval="8000"
        >
         <v-carousel-item
@@ -38,9 +59,10 @@
           :src="item.src"
         ></v-carousel-item>
       </v-carousel>
+    </v-flex>
+  </v-layout>
 
-    </v-layout>
-  </v-container>
+</v-container>
 
   </div>
 </template>
@@ -78,7 +100,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40vh;
 }
 
 .title h1 {

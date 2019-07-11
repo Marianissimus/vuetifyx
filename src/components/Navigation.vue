@@ -1,7 +1,6 @@
 <template>
   <div>
   <v-toolbar app color="brown darken-4" dark>
-    <v-toolbar-side-icon @click="toggleDrawer"></v-toolbar-side-icon>
     <v-spacer></v-spacer>
     <v-toolbar-items class="hidden-sm-and-down">
       <v-btn flat to="/home">
@@ -36,25 +35,30 @@
     <v-spacer></v-spacer>
     <v-toolbar-side-icon @click="toggleDrawer"></v-toolbar-side-icon>
   </v-toolbar>
+  <app-drawer ref="appDrawer" @makeABooking="dialog = true"></app-drawer>
   <make-a-booking :dialog="dialog" @hasFinished="dialog = false"></make-a-booking>
   </div>
 </template>
 
 <script>
+import NavigationDrawer from './NavigationDrawer'
+
 export default {
+  components: {
+    'app-drawer': NavigationDrawer
+  },
   name: 'AppNavigation',
   data () {
     return {
-      drawer: true,
-      dialog: false
+      dialog: false,
+      drawer: false
     }
   },
   methods: {
-    toggleDrawer () {
-      this.drawer = !this.drawer
-      this.$emit('drawerChanged', this.drawer)
+    toggleDrawer() {
+      this.$refs.appDrawer.toggleDrawer()
     }
-  }
+  },
 }
 </script>
 
