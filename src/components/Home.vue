@@ -14,7 +14,7 @@
     </v-flex>
   </v-layout>
 
-  <v-flex>
+  <v-flex class="gifpreloader">
     <v-parallax
     light
     src="https://picsum.photos/1200/1600"
@@ -33,7 +33,15 @@
   <v-layout row class="my-3">
     <v-flex sm4>
       <v-card dark color="brown darken-2">
-        <v-card-text>one</v-card-text>
+        <v-card-title >
+          <div class="title font-weight-light">
+            <span class="ml-3">About</span>
+          </div>
+        </v-card-title>
+        <v-divider></v-divider>
+        <v-card-text>
+          We believe that coming to a restaurant must bring people together around excellent food, sometimes traditional, sometimes innovative, and even better atmosphere.
+        </v-card-text>
       </v-card>
     </v-flex>
     <v-flex sm4>
@@ -43,9 +51,33 @@
     </v-flex>
     <v-flex sm4>
       <v-card dark color="brown darken-2">
-        <v-card-text>three</v-card-text>
+        <v-card-title >
+          <div class="title font-weight-light">
+            <span class="ml-3">Facilities</span>
+          </div>
+        </v-card-title>
+        <v-divider></v-divider>
+        <v-card-text>
+          <v-list-tile>
+            <v-icon class="mr-3" color="white">ac_unit</v-icon>
+            Air Conditioning
+          </v-list-tile>
+          <v-list-tile>
+            <v-icon class="mr-3" color="white">cake</v-icon>
+            Special Events
+          </v-list-tile>
+          <v-list-tile>
+            <v-icon class="mr-3" color="white">child_care</v-icon>
+            <span>Child Care Amenities</span>
+          </v-list-tile>
+          <v-list-tile>
+            <v-icon class="mr-3" color="white">local_parking</v-icon>
+            <span>Private Parking</span>
+          </v-list-tile>
+        </v-card-text>
       </v-card>
     </v-flex>
+
   </v-layout>
 
   <v-layout row align-center justify-center>
@@ -91,6 +123,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.gifpreloader {
+    background:url(../assets/loading.gif) center center no-repeat;
+}
 
 .title {
   font-family: 'Josefin Sans', sans-serif;

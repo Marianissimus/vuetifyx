@@ -17,47 +17,30 @@
                   full-width
                   offset-x
                 >
-                  <template v-slot:activator="{ on }">
-                    <div
-                      v-if="!event.time"
-                      v-ripple
-                      class="my-event"
-                      v-on="on"
-                      v-html="event.title"
-                    ></div>
-                  </template>
-                  <v-card
-                    color="grey lighten-4"
-                    min-width="350px"
-                    class="elevation-22"
+                <template v-slot:activator="{ on }">
+                  <div
+                    v-if="!event.time"
+                    v-ripple
+                    class="my-event"
+                    v-on="on"
+                    v-html="event.title"
+                  ></div>
+                </template>
+                <v-card
+                  color="grey lighten-4"
+                  min-width="350px"
+                  class="elevation-22"
+                >
+                  <v-toolbar
+                    color="brown darken-2"
+                    dark
                   >
-                    <v-toolbar
-                      color="brown darken-2"
-                      dark
-                    >
-<!--                       <v-btn icon>
-                        <v-icon>edit</v-icon>
-                      </v-btn> -->
-                      <v-toolbar-title v-html="event.title"></v-toolbar-title>
-                      <v-spacer></v-spacer>
-<!--                       <v-btn icon>
-                        <v-icon>favorite</v-icon>
-                      </v-btn>
-                      <v-btn icon>
-                        <v-icon>more_vert</v-icon>
-                      </v-btn> -->
-                    </v-toolbar>
-                    <v-card-title primary-title>
-                      <span v-html="event.details"></span>
-                    </v-card-title>
-<!--                     <v-card-actions>
-                      <v-btn
-                        flat
-                        color="secondary"
-                      >
-                        Cancel
-                      </v-btn>
-                    </v-card-actions> -->
+                    <v-toolbar-title v-html="event.title"></v-toolbar-title>
+                    <v-spacer></v-spacer>
+                  </v-toolbar>
+                  <v-card-title primary-title>
+                    <span v-html="event.details"></span>
+                  </v-card-title>
                   </v-card>
                 </v-menu>
               </template>

@@ -8,7 +8,7 @@
           <v-container grid-list-md fluid>
             <v-layout row wrap>
               <v-flex
-                v-for="n in 9"
+                v-for="n in 12"
                 :key="n"
                 xs6 sm4 lg3
                 d-flex
