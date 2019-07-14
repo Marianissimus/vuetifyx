@@ -1,37 +1,30 @@
 <template>
-  <v-container grid-list-lg>
-
-  <v-layout align-center justify-center>
-    <v-flex>
-      <div class="title">
-        <h2>Welcome to</h2>
-        <h1>
-          MY DELICIOUS
-          <br/>
-          RESTAURANT
-        </h1>
-      </div>
-    </v-flex>
-  </v-layout>
-
-  <v-flex class="gifpreloader">
+  <v-container class="px-0 py-0" fluid>
+    
     <v-parallax
-    light
-    src="https://picsum.photos/1200/1600"
-    >
-      <v-layout
-      column
-      justify-center
-      align-center
+      light
+      :src="require('../assets/back.jpg')"
+      height= "650"
+      width="100%"
       >
-        <h1 class="display-2 font-weight-thin mb-3">Deliciousness</h1>
-        <h4 class="subheading">Enjoy the finest food we have cooked today!</h4>
+      <v-layout align-center justify-center>
+        <v-flex>
+          <div class="title">
+            <!-- <h2>Welcome to</h2> -->
+            <h1>
+              <small>the</small>
+              <br>
+               Obsidere
+              <br/>
+              <small>Restaurant</small>
+            </h1>
+          </div>
+        </v-flex>
       </v-layout>
     </v-parallax>
-  </v-flex>
 
-  <v-layout row class="my-3">
-    <v-flex sm4>
+  <v-layout row align-center justify-space-around py-3>
+    <v-flex sm3 >
       <v-card dark color="brown darken-2">
         <v-card-title >
           <div class="title font-weight-light">
@@ -96,7 +89,6 @@
 
 </v-container>
 
-  </div>
 </template>
 
 <script>
@@ -124,6 +116,9 @@ export default {
 
 <style lang="scss" scoped>
 
+.container {
+  background-color: #eef2f5;
+}
 .gifpreloader {
     background:url(../assets/loading.gif) center center no-repeat;
 }
