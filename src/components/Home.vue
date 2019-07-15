@@ -1,6 +1,6 @@
 <template>
   <v-container class="px-0 py-0" fluid>
-    
+
     <v-parallax
       light
       :src="require('../assets/back.jpg')"
@@ -12,9 +12,9 @@
           <div class="title">
             <!-- <h2>Welcome to</h2> -->
             <h1>
-              <small>the</small>
+              <small>La</small>
               <br>
-               Obsidere
+               Obsession
               <br/>
               <small>Restaurant</small>
             </h1>
@@ -23,30 +23,49 @@
       </v-layout>
     </v-parallax>
 
-  <v-layout row align-center justify-space-around py-3>
-    <v-flex sm3 >
+  <v-layout align-space-around justify-space-around row py-5 wrap>
+    <v-flex sm8 md3 d-flex :class="{'ma-4': $vuetify.breakpoint.smAndDown}">
       <v-card dark color="brown darken-2">
         <v-card-title >
           <div class="title font-weight-light">
-            <span class="ml-3">About</span>
+            <span class="ml-3">BELIEF</span>
           </div>
         </v-card-title>
         <v-divider></v-divider>
         <v-card-text>
-          We believe that coming to a restaurant must bring people together around excellent food, sometimes traditional, sometimes innovative, and even better atmosphere.
+          <p>
+          We believe that a restaurant must be striving to always re-create a certain feeling, an ineffable mixture of delicious food, impeccable serving, and serene atmosphere.
+          </p><p>
+          The search for an ideal time, for the je ne sais quoi, c'est ça La Obsession.
+          </p>
         </v-card-text>
       </v-card>
     </v-flex>
-    <v-flex sm4>
-      <v-card dark color="brown lighten-2">
-        <v-card-text>two</v-card-text>
-      </v-card>
-    </v-flex>
-    <v-flex sm4>
+
+    <v-flex sm8 md3 d-flex :class="{'ma-4': $vuetify.breakpoint.smAndDown}">
       <v-card dark color="brown darken-2">
         <v-card-title >
           <div class="title font-weight-light">
-            <span class="ml-3">Facilities</span>
+            <span class="ml-3">HOW WE WORK</span>
+          </div>
+        </v-card-title>
+        <v-divider></v-divider>
+        <v-card-text>
+          <p>
+          We strive to achieve our belief with a cuisine based on the top, fresh local ingredients and innovating on their use.
+          </p>
+          <p>
+          Therefore, our latest creation will be the freshest, and our creativity will make the familiar seem so new and joyfull.
+          </p>
+        </v-card-text>
+      </v-card>
+    </v-flex>
+
+    <v-flex sm8 md3 d-flex :class="{'ma-4': $vuetify.breakpoint.smAndDown}">
+      <v-card dark color="brown darken-2">
+        <v-card-title >
+          <div class="title font-weight-light">
+            <span class="ml-3">FACILITIES</span>
           </div>
         </v-card-title>
         <v-divider></v-divider>
@@ -117,7 +136,7 @@ export default {
 <style lang="scss" scoped>
 
 .container {
-  background-color: #eef2f5;
+  background-color: #FCF7F8;
 }
 .gifpreloader {
     background:url(../assets/loading.gif) center center no-repeat;
@@ -149,9 +168,19 @@ export default {
   }
 }
 
+.title small {
+  font-family: 'Croissant One', cursive;
+  letter-spacing: .1em;
+  font-weight: 400;
+}
+
 .title h2 {
   font-family: 'Croissant One', cursive;
   color: #5D4037;
   text-shadow: 1px 2px 3px #CCC;
+}
+
+.v-card__text{
+  font-size: 1.1em;
 }
 </style>

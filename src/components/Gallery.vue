@@ -15,11 +15,11 @@
               >
                 <v-card flat tile class="d-flex pointer">
                   <v-img
-                    :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                    :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`"
+                    :src="require('../assets/gallery/gallery' + n + '.jpg')"
+                    :lazy-src="require('../assets/gallery/gallery' + n + '.jpg')"
                     aspect-ratio="1"
                     class="grey lighten-2"
-                    @click="openImage(`${n * 5 + 10}`)"
+                    @click="openImage(n)"
                   >
                     <template v-slot:placeholder>
                       <v-layout
@@ -45,21 +45,28 @@
 
         <v-dialog v-model="currentImg" v-if="currentImg" width="800px" height="500px">
           <v-card flat>
+
            <v-img
               aspect-ratio="1"
-              width="800px"
-              height="500px"
-              contain
-              :src="currentSrc"
+              cover
+              :src="currentImg"
               >
-               <v-layout pa-2 class="white--text">
-                  <v-spacer></v-spacer>
-                  <span
-                  @click="currentImg = false"
-                  class="headline pointer font-weight-black shadow mr-2">
-                    <v-icon large color="white">close</v-icon>
-                  </span>
-               </v-layout>
+
+              <v-layout class="white--text navigation">
+
+                <v-btn v-show="currentIndex > 1" flat class="leftArrow shadow" @click="openImage(currentIndex-1)">
+                  <v-icon x-large color="white">navigate_before</v-icon>
+                 </v-btn>
+
+                 <v-btn v-show="currentIndex < 12" flat class="rightArrow shadow" @click="openImage(currentIndex+1)">
+                  <v-icon x-large color="white">navigate_next</v-icon>
+                 </v-btn>
+
+                 <v-btn flat @click="currentImg = false" class="headline pointer font-weight-black shadow closebtn">
+                   <v-icon x-large color="white">close</v-icon>
+                 </v-btn>
+              </v-layout>
+
               <template v-slot:placeholder>
                 <v-layout
                   fill-height
@@ -88,15 +95,15 @@ export default {
   data () {
     return {
       currentImg: null,
-      currentSrc: null,
+      currentIndex: null,
       lazySrc: null
     }
   },
   methods: {
     openImage(img) {
-      this.currentImg = img
-      this.currentSrc = "https://picsum.photos/800/500?image=" + img
-      this.lazySrc = "https://picsum.photos/500/300?image=" + img
+      this.currentIndex = img
+      this.currentImg = require('../assets/gallery/gallery' + img + '.jpg')
+      // this.lazySrc = "https://picsum.photos/500/300?image=" + img
     }
   }
 }
@@ -106,7 +113,31 @@ export default {
 .pointer {
   cursor: pointer;
 }
+
 .shadow {
   text-shadow: 0px 0px 4px #000000;
 }
+
+.leftArrow{
+  position: absolute;
+  color: white;
+  background: none;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.rightArrow{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 </style>
