@@ -18,7 +18,11 @@
     <v-layout row wrap align-content-space-around>
       <v-flex v-for="item in filteredItems" :key="item.id" xs12 sm6 md4 lg3>
         <v-card elevation="12" ripple height="320">
-          <v-img class="white--text shadow headline black text-capitalize" height="200px" src="https://picsum.photos/200">
+          <v-img class="white--text shadow headline black text-capitalize" height="200px" 
+           :src="require(`../assets/menu/${item.image}_sm.jpg`)"
+           style="cursor: pointer"
+           @click="enlarge(item.image)"
+          >
             <v-card-title>
               {{ item.name }}
             </v-card-title>
@@ -35,6 +39,42 @@
         </v-card>
       </v-flex>
     </v-layout>
+
+        <!-- the pop-up image -->
+    <v-layout align-center justify-center>
+
+        <v-dialog v-model="currentImg" v-if="currentImg" fullscreen>
+          <v-responsive flat>
+
+           <v-img
+             
+              cover
+              :src="require(`../assets/menu/${currentImg}.jpg`)"
+              >
+
+              <v-layout class="white--text navigation">
+
+                 <v-btn flat @click="currentImg = false" class="headline pointer font-weight-black shadow closebtn">
+                   <v-icon x-large color="white">close</v-icon>
+                 </v-btn>
+              </v-layout>
+
+              <template v-slot:placeholder>
+                <v-layout
+                  fill-height
+                  align-center
+                  justify-center
+                  ma-0
+                >
+                  <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
+                </v-layout>
+              </template>
+            </v-img>
+          </v-responsive>
+
+        </v-dialog>
+    </v-layout>
+
   </v-container>
 </template>
 
@@ -49,7 +89,9 @@ export default {
   data () {
     return {
       items: [],
-      filteredItems: []
+      filteredItems: [],
+      isImageEnlarged: false,
+      currentImg: false
     }
   },
   created () {
@@ -62,6 +104,10 @@ export default {
     },
     filter(arg){
       this.filteredItems = (arg === 'all') ? this.items : this.items.filter(el => el.type.includes(arg))
+    },
+    enlarge(item){
+      this.currentImg = item
+      this.isImageEnlarged = true
     }
   }
 }

@@ -1,13 +1,13 @@
 { "menu": [
     {
       "id": 122,
-      "name": "broth",
-      "description": "freshly boiled from farm chicken",
-      "price": 14,
+      "name": "Chicken",
+      "description": "Farm chicken slowly roasted in wood oven with unique ingredients and formula to keep it juicy",
+      "price": 24,
       "is_available": true,
-      "images": [],
+      "image": "chicken",
       "rating": 3,
-      "type": ["lunch", "dinner"]
+      "type": ["dinner"]
     },
     {
       "id": 12,
@@ -15,57 +15,107 @@
       "description": "stake from Ghitza, the famous free range pork",
       "price": 21,
       "is_available": true,
-      "images": [],
+      "image": "brownie_cake",
       "rating": 4,
       "type": ["lunch", "dinner"]
     },
     {
       "id": 231,
-      "name": "summer salad",
+      "name": "asparagus barbecue",
       "description": "an assortment of the most suculent and fresh vegetables",
       "price": 13,
       "is_available": true,
-      "images": [],
+      "image": "asparagus_barbecue",
       "rating": 2,
       "type": ["lunch", "dinner", "breakfast"]
     },
     {
       "id": 125,
-      "name": "fries",
+      "name": "avocado bread",
       "description": "the best thing that the potatoes can give",
       "price": 7,
       "is_available": true,
-      "images": [],
+      "image": "avocado_bread",
       "rating": 1,
       "type": ["lunch", "dinner", "breakfast"]
     },
     {
       "id": 991,
-      "name": "eclaire",
+      "name": "baking_cake",
       "description": "french can do desserts, too",
       "price": 21,
       "is_available": true,
-      "images": [],
+      "image": "baking_cake",
       "rating": 5,
       "type": ["dinner"]
     },
     {
       "id": 828,
-      "name": "wine",
+      "name": "basil_cheese",
       "description": "red red wine, i will always love youuuu...",
       "price": 41,
       "is_available": true,
-      "images": [],
+      "image": "basil_cheese",
       "rating": 4,
       "type": ["dinner"]
     },
     {
       "id": 332,
-      "name": "benedict eggs",
+      "name": "beef_ribs",
       "description": "start your day in style",
       "price": 12,
       "is_available": true,
-      "images": [],
+      "image": "beef_ribs",
+      "rating": 4,
+      "type": ["breakfast"]
+    },
+    {
+      "id": 234,
+      "name": "burger",
+      "description": "start your day in style",
+      "price": 12,
+      "is_available": true,
+      "image": "burger",
+      "rating": 4,
+      "type": ["breakfast"]
+    },
+    {
+      "id": 235,
+      "name": "doughnuts",
+      "description": "start your day in style",
+      "price": 12,
+      "is_available": true,
+      "image": "doughnuts",
+      "rating": 4,
+      "type": ["breakfast"]
+    },
+    {
+      "id": 236,
+      "name": "fish",
+      "description": "start your day in style",
+      "price": 12,
+      "is_available": true,
+      "image": "fish",
+      "rating": 4,
+      "type": ["breakfast"]
+    },
+    {
+      "id": 237,
+      "name": "pancakes",
+      "description": "start your day in style",
+      "price": 12,
+      "is_available": true,
+      "image": "pancakes",
+      "rating": 4,
+      "type": ["breakfast"]
+    },
+    {
+      "id": 238,
+      "name": "salmon",
+      "description": "start your day in style",
+      "price": 12,
+      "is_available": true,
+      "image": "salmon",
       "rating": 4,
       "type": ["breakfast"]
     }
