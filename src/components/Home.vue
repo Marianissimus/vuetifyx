@@ -3,7 +3,7 @@
 
     <v-parallax
       light
-      :src="require('../assets/back.jpg')"
+      :src="require('../assets/back2.jpg')"
       height= "650"
       width="100%"
       >
@@ -96,6 +96,7 @@
     <v-flex>
       <v-carousel
        interval="8000"
+       height="1000"
        >
         <v-carousel-item
           v-for="(item,i) in carouselItems"
@@ -106,26 +107,38 @@
     </v-flex>
   </v-layout>
 
+  <v-layout row class="my-5">
+    <v-card dark color="brown darken-2">
+<!--       <v-card-title>
+        <span class="display-1">Find us</span>
+      </v-card-title> -->
+      <v-card-text>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, facilis exercitationem quidem fugit? Vel mollitia aut id, dolore repellendus nam quia ex aliquid non at eos consectetur iste magnam. Fugiat.
+      </v-card-text>
+    </v-card>
+  </v-layout>
+
 </v-container>
 
 </template>
 
 <script>
+
 export default {
   data () {
     return {
       carouselItems: [
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg'
+          src: require('../assets/menu/doughnuts.jpg')
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/sky.jpg'
+          src: require('../assets/gallery/gallery12.jpg')
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/bird.jpg'
+          src: require('../assets/menu/pancakes.jpg')
         },
         {
-          src: 'https://cdn.vuetifyjs.com/images/carousel/planet.jpg'
+          src: require('../assets/menu/avocado_bread.jpg')
         }
       ]
     }

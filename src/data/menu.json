@@ -7,12 +7,12 @@
       "is_available": true,
       "image": "chicken",
       "rating": 3,
-      "type": ["dinner"]
+      "type": ["lunch"]
     },
     {
       "id": 12,
-      "name": "premium stake",
-      "description": "stake from Ghitza, the famous free range pork",
+      "name": "Brownie Cake",
+      "description": "Fresh from the oven, with a mixt of nuts and home made chocolate",
       "price": 21,
       "is_available": true,
       "image": "brownie_cake",
@@ -22,27 +22,27 @@
     {
       "id": 231,
       "name": "asparagus barbecue",
-      "description": "an assortment of the most suculent and fresh vegetables",
+      "description": "A most succulent barbecue complimented by our special sauce and fresh asparagus",
       "price": 13,
       "is_available": true,
       "image": "asparagus_barbecue",
       "rating": 2,
-      "type": ["lunch", "dinner", "breakfast"]
+      "type": ["lunch", "dinner"]
     },
     {
       "id": 125,
-      "name": "avocado bread",
-      "description": "the best thing that the potatoes can give",
+      "name": "avocado delice",
+      "description": "Can we combine healthy, fresh ingredients in a deliciou meal? Yes, we can!",
       "price": 7,
       "is_available": true,
       "image": "avocado_bread",
-      "rating": 1,
-      "type": ["lunch", "dinner", "breakfast"]
+      "rating": 4,
+      "type": ["dinner", "breakfast"]
     },
     {
       "id": 991,
-      "name": "baking_cake",
-      "description": "french can do desserts, too",
+      "name": "White Princess",
+      "description": "Surprisingly fragrant vanilla, cream, lemon and cinammon fresh cake",
       "price": 21,
       "is_available": true,
       "image": "baking_cake",
@@ -51,58 +51,58 @@
     },
     {
       "id": 828,
-      "name": "basil_cheese",
-      "description": "red red wine, i will always love youuuu...",
+      "name": "Obsession pasta",
+      "description": "Home made pasta with red cherry tomatoes, blue cheese, and green basil from our garden",
       "price": 41,
       "is_available": true,
       "image": "basil_cheese",
       "rating": 4,
-      "type": ["dinner"]
+      "type": ["dinner", "breakfast"]
     },
     {
       "id": 332,
-      "name": "beef_ribs",
-      "description": "start your day in style",
+      "name": "Ribs",
+      "description": "Tender, juicy, flavoured, slowly cooked, surprising with every bite, perfect to savour in style",
       "price": 12,
       "is_available": true,
       "image": "beef_ribs",
       "rating": 4,
-      "type": ["breakfast"]
+      "type": ["dinner", "lunch"]
     },
     {
       "id": 234,
       "name": "burger",
-      "description": "start your day in style",
+      "description": "You deserve to start your day in style with a savory burger and lightly crisp fries",
       "price": 12,
       "is_available": true,
       "image": "burger",
-      "rating": 4,
+      "rating": 2,
       "type": ["breakfast"]
     },
     {
       "id": 235,
       "name": "doughnuts",
-      "description": "start your day in style",
+      "description": "An assortment of yummy, cream filled donuts ready to be shared or fought upon",
       "price": 12,
       "is_available": true,
       "image": "doughnuts",
       "rating": 4,
-      "type": ["breakfast"]
+      "type": ["dinner", "lunch"]
     },
     {
       "id": 236,
-      "name": "fish",
-      "description": "start your day in style",
+      "name": "Fillet of fish",
+      "description": "The taste to refresh your pallate and fill your heart with joy for a lovely evening",
       "price": 12,
       "is_available": true,
       "image": "fish",
       "rating": 4,
-      "type": ["breakfast"]
+      "type": ["dinner"]
     },
     {
       "id": 237,
       "name": "pancakes",
-      "description": "start your day in style",
+      "description": "Hard day ahead? Fill up your energy and good mood meter with hot, delicious pancakes ",
       "price": 12,
       "is_available": true,
       "image": "pancakes",
@@ -112,12 +112,12 @@
     {
       "id": 238,
       "name": "salmon",
-      "description": "start your day in style",
+      "description": "When we serve it, be sure it's the freshiest, tastiest salmon you could get your hands on!",
       "price": 12,
       "is_available": true,
       "image": "salmon",
       "rating": 4,
-      "type": ["breakfast"]
+      "type": ["breakfast", "lunch"]
     }
   ]
 }
