@@ -73,8 +73,7 @@ export default {
     'current-heading': Heading
   },
   data: () => ({
-    lorem: `Lorem ipsum dolor sit amet, mel at clita quando. Te sit oratio vituperatoribus, nam ad ipsum posidonium mediocritatem, explicari dissentiunt cu mea. Repudiare disputationi vim in, mollis iriure nec cu, alienum argumentum ius ad. Pri eu justo aeque torquatos.`,
-    today: new Date().toString().slice(0, 15),
+    today: new Date().toString().slice(0, 15)
   }),
   methods: {
   }

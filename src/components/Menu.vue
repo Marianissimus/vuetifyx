@@ -43,13 +43,13 @@
         <!-- the pop-up image -->
     <v-layout align-center justify-center>
 
-        <v-dialog v-model="currentImg" v-if="currentImg" max-width="80vw">
+        <v-dialog v-model="currentImg" v-if="currentImg" max-height="80vh">
 
-          <v-layout align-center justify-center fill-height style="position: relative">
+          <v-layout align-center justify-center fill-height style="position: relative"  class="color: brown darken-4">
 
            <v-img
               cover
-              height= "800px"
+              max-height= "80vh"
               :src="require(`../assets/menu/${currentImg}.jpg`)"
             >
 

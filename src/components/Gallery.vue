@@ -43,12 +43,12 @@
     <!-- the pop-up image -->
     <v-layout align-center justify-center>
 
-        <v-dialog v-model="currentImg" v-if="currentImg" width="800px" height="500px">
+        <v-dialog v-model="currentImg" v-if="currentImg" max-width="80vw" max-height="80vh">
           <v-card flat>
 
            <v-img
-              aspect-ratio="1"
               cover
+              max-height="80vh"
               :src="currentImg"
               >
 

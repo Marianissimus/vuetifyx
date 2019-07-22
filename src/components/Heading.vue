@@ -12,7 +12,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
  .custom {
   font-family: 'Croissant One', cursive;
   color: #5D4037;
