@@ -92,7 +92,7 @@
       class="mt-5 mb-3 px-3 brown darken-4"
     >
       <v-flex xs12 class="py-3">
-        <h3 class="title mt-2">Find us</h3>
+        <h3 class="title mt-2">Find us on</h3>
       </v-flex>
       <v-layout row>
         <v-flex>
@@ -188,6 +188,7 @@ export default {
   color: transparent;
   -moz-background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   text-transform: uppercase;
   font-size: 5em;
   line-height: 1.3;
